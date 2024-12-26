@@ -1,0 +1,51 @@
+<script>
+    function placeOrder(item){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Order Placed for:",item);
+                resolve();
+            },2000);
+        })
+    }
+    function makePayment(amt){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Payment Received",amt);
+                resolve();
+            },5000);
+        })
+    }
+    function confirmOrder(){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Order Confirmed");
+                resolve();
+            },1000);
+        })
+    }
+
+    function sentEmail(){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Successfullt Email Sent to the User");
+                resolve();
+            },3000);
+        })
+    }
+
+    //placeOrder('Shirts')
+    //.then(()=>makePayment(2000))
+    //.then(()=>confirmOrder())
+    //.then(()=>sentEmail())
+    //.then(()=>console.log('Process Ended....'))
+    //.catch((msg)=>console.log(msg));
+
+    async function processOrder(){
+        await placeOrder('Shirts');
+        await makePayment(2000);
+        await confirmOrder();
+        await sentEmail();
+        console.log('Order Delivered');
+    }
+    processOrder();
+</script>

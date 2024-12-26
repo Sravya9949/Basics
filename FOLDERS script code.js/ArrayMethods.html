@@ -1,0 +1,36 @@
+<script>
+    let arr = [10,11,12,13,14,15]
+    console.log(Array.isArray(arr));
+    console.log(arr);
+
+    arr.push(16);
+    console.log(arr);
+
+    arr.pop(16);
+    console.log(arr);
+
+
+    arr.unshift(9);
+    console.log(arr);
+
+    arr.shift();
+    console.log(arr);
+
+    numbers = [10,20,30,40,50,70]
+    console.log(numbers);
+    numbers.splice(2,3,600,700,'Kod',true);
+    console.log(numbers);
+
+    arr1 = [100, 200, true, 600, 'kod']
+    let newarr = arr.slice(1, 4);
+    console.log(newarr);
+    console.log(arr1);
+</script>
+
+<!--
+1.push()- Adds Elements at end.
+2.pop()- Removes last element.
+3.unshift()- Add emlements at first (0th index value).
+4.shift()- Removes 0th index element.
+5.splice(start, deleteCount, Elements to be added).
+-->

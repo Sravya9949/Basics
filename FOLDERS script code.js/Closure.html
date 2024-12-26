@@ -1,0 +1,38 @@
+<!--
+<script>
+    function outerFunction(){
+        let count = 0;
+        return function(){
+            console.log(++count);
+        }
+    }
+
+    let return_value_outer = outerFunction();
+    for(var i=0;i<=5;i++){
+        return_value_outer;
+    }
+</script>-->
+
+<script>
+    function outerFunction(){
+        let count = 0;
+        return {
+            increment:function(){
+                console.log(count++);
+            },
+            decrement:function(){
+                console.log(count--);
+            },
+            reset:function(){
+                count = 0;
+                console.log(count);
+            }
+        }
+    }
+
+    let counter = outerFunction();
+    counter.increment();
+    counter.increment();
+    counter.decrement();
+    counter.reset();
+</script>

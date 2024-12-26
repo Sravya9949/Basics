@@ -1,0 +1,33 @@
+<!--spread Operator (...)-->
+
+<script>
+    function add(){
+        if(args.length === 0) {
+            console.log('No Arguments...!');
+        }
+        else{
+            let sum = 0;
+            for (let i =0;i<args.length;i++){
+                sum = sum + args[i];
+            }
+            //let sum = arguments.reduce((acc,ele) => acc * ele,0);
+            console.log('Sum of Arguments is', sum);
+        }
+    }
+
+    //add();
+    //add(10,20,30,40);
+
+    //let sub = ()=>{
+    //    if(arguments.length === 0) {
+    //        console.log('No Arguments');
+    //   }
+    //    else {
+     //       let sum = arguments.reduce((acc,ele)=> acc+ ele,0);
+     //       console.log('Sum is: ', sum);
+    //    }
+    //}
+
+    sub();
+    
+</script>

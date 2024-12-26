@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>getElementByClass()</title>
+</head>
+<body>
+    <p class="container">para 1</p>
+    <p class="container">para 2</p>
+    <p class="container">para 3</p>
+
+    <script>
+        function fun() {
+        const target = document.getElementsByClassName('container');
+        console.log("Length Before DOM update is:",target.length);
+
+        const newEle = document.createElement('div');
+        //<div><h3 style='color:blue'>Hello</h3></div>
+        newEle.innerHTML = `<h3 style='color:blue>Hello</h3>`;//<p>Hello</p>
+        newEle.classList.add('container');//<p class="container">Hello</p>
+        document.body.appendChild(newEle);
+        console.log("Length After DOM update is:",target.length);
+        }
+    </script>
+</body>
+</html>
